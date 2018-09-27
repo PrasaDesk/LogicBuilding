@@ -1,9 +1,9 @@
 #include"header.h"
 
-void ReverseInPlace(char *str)
+BOOL Palindrom(char *str)
 {
         int i = 0;
-        int bck = 0,fcnt = 0;
+        int bck = 0,fcnt = 0,flag = 1;
         char temp;
         if(str == NULL)
         {
@@ -14,15 +14,25 @@ void ReverseInPlace(char *str)
         {
                 i++;
         }
-	fcnt = 0;
+        fcnt = 0;
         bck = i-1;
         while(fcnt <= bck)
         {
-                temp = str[fcnt];
-                str[fcnt]=str[bck];
-                str[bck]=temp;
-                fcnt++; 
+                if(str[fcnt] != str[bck])
+		{
+			flag = 0;
+			break;
+		}
+                fcnt++;
                 bck--;
-        }       
+        }
+	if(flag == 1)
+	{
+		return TRUE;
+	}
+	else
+	{
+		return FALSE;
+	}
 }
 

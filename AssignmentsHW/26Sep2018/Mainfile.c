@@ -5,8 +5,9 @@ int main()
 	int iRet = 0;
 	char Arr[30]={'\0'};
 	char ch;
-	printf("Enter the Character : ");
-        scanf("%c",&ch);
+	BOOL bRet = TRUE;
+//	printf("Enter the Character : ");
+//      scanf("%c",&ch);
 
 	printf("Enter the String : ");
 	//scanf("%s",Arr);
@@ -53,10 +54,20 @@ int main()
         }
 
 	DisplayReverse(Arr);							// 8
-*/
+
 
 	ReverseInPlace(Arr);							// 10
 	printf("Reverse String is = %s\n",Arr);	
+*/
+	bRet = Palindrom(Arr);							// 9
+	if(bRet == TRUE)
+	{
+		printf("String is Palindorm\n");
+	}
+	else
+	{
+		printf("String is not Plaindrom\n");
+	}
 
 	return 0;
 }
