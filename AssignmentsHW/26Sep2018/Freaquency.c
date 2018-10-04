@@ -24,4 +24,3 @@ int DiffFrequency(char *str)
         }
         return (iSmallCnt - iCapitalCnt);
 }
-
