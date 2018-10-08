@@ -23,17 +23,22 @@ int main()
 	iRet = WordLength(str);
 	printf("\nLargest Word Length in the String is : %d\n",iRet);
 
-	//Question 3
-	//StrReverseX(str);
-	//printf("After Reverse a string : \n::: %s\n",str);
-
 	//Question 4
 	StrCpyX(str, dest);
-	printf("After Removing White Space from string- \n::: %s\n",dest);
+	printf("\nAfter Removing White Space from string- \n::: %s\n",dest);
 
 	//Question 5
 	StrCapX(str);
-	printf("After Performing StrCapX -\n::: %s\n",str);
+	printf("\nAfter Performing StrCapX -\n::: %s\n",str);
+
+	//Largest Word
+	printf("\nPrinting largest word from String : \n");
+	LargestWordX(str);
+	
+	//Question 3
+        StrReverseX(str);
+        printf("\nAfter Reverse a string : \n::: %s\n",str);
+
 
 	return 0;
 }

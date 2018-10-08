@@ -1,7 +1,8 @@
-#include<stdio.h>
+#include"header.h"
 
-void LargestWord(char *str)
+void LargestWordX(const char *str)
 {
+	const char *temp = str;
 	int i = 0,j = 0,s,e;
 	int ocnt = 0,icnt= 0;
 	if(NULL == str)
@@ -10,17 +11,17 @@ void LargestWord(char *str)
 		return;
 	}	
 
-	while(*str != '\0')
+	while(*temp != '\0')
 	{
 		
-		if(*str != ' ')
+		if(*temp != ' ')
 		{
 			j = i;
-			while((*str != ' ')&&(*str != '\0'))
+			while((*temp != ' ')&&(*temp != '\0'))
 			{	
 				i++;
 				ocnt++;
-				str++;
+				temp++;
 			}
 			 if(icnt < ocnt)
 	                {
@@ -31,12 +32,12 @@ void LargestWord(char *str)
         	        }			
 		}
 		
-		if(*str == ' ')
+		if(*temp == ' ')
                 {
-                        while((*str == ' ')&&(*str != '\0'))
+                        while((*temp == ' ')&&(*temp != '\0'))
                         {
 				i++;
-                                str++;
+                                temp++;
                         }
                 }
 
@@ -45,11 +46,11 @@ void LargestWord(char *str)
 	printf("Largest word is : (s = %d  e = %d) \n::: ",s,e);
 	for(i = s; i < e; i++)
 	{
-		printf("%c  %c",str[i], '-');
+		printf("%c",str[i]);
 	}
 	printf("\n");
 }
-
+/*
 int main()
 {
 	char str[30];
@@ -60,3 +61,4 @@ int main()
 	
 	return 0;
 }
+*/
