@@ -16,18 +16,10 @@ void Pattern3(int iNo1,int iNo2)
         {
                 for(j = 1;j <= iNo2; j++)
                 {
-			if(i == 1)
+			if(i == 1 || i == iNo1 || j == 1 || j == iNo2)
 			{
 				printf("%d ",i);
 			}
-			else if(i == iNo1)
-			{
-				printf("%d ",iNo1);
-			}
-                        else if(j == 1 || j == iNo2)
-                        {
-                                printf("%d ",i);
-                        }
                         else
                         {
                                 printf("* ");
